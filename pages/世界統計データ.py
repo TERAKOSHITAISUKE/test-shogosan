@@ -4,7 +4,7 @@ import plotly.express as px
 import os
 import streamlit as st
 
-data_set=px.data.gapminder()
+data_set=pd.read_csv("../data/world_GDP_data/gapminder_data.csv")
 years_list=list(data_set["year"].unique())
 country_list=list(data_set["country"].unique())
 
