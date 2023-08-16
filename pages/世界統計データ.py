@@ -4,7 +4,9 @@ import plotly.express as px
 import os
 import streamlit as st
 
-data_set=pd.read_csv("../data/world_GDP_data/gapminder_data.csv")
+# ファイルパスを絶対パスに変更する
+data_path = os.path.join(os.path.dirname(__file__), "../data/world_GDP_data/gapminder_data.csv")
+data_set = pd.read_csv(data_path)
 years_list=list(data_set["year"].unique())
 country_list=list(data_set["country"].unique())
 
